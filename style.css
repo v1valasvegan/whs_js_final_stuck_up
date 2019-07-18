@@ -1,0 +1,274 @@
+body {
+    
+    padding: 20px;
+    font-family: 'Cuprum', sans-serif;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/skulls.png');
+    background-repeat: repeat;
+}
+
+.menu-canvas {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(4, 1fr);
+    min-height: 1000px;
+    margin-bottom: 200px;
+}
+
+.menu-canvas.hidden,
+.game-canvas.hidden,
+.card.hidden {
+    display: none;
+}
+
+.label__image {
+    width: 120px;
+}
+
+.main__heading {
+    text-align: center;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.main__subheading {
+    margin-bottom: 50px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.hardness-list__input {
+    display: none;
+}
+
+.hardness-list {
+    display: grid;
+    grid-row-gap: 40px;
+    grid-row: 2 / 5;
+    list-style: none;
+    padding-left: 150px;
+}
+
+.label {
+    position: relative;
+    display: grid;
+    grid-row-gap: 10px;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.label::after {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    content: '';
+    background-image: url('./images/skull.png');
+    background-size: contain;
+}
+
+.label_david::after {
+    width: 50px;
+    height: 50px;
+}
+
+.label_nina::after {
+    width: 100px;
+    height: 50px;
+}
+
+.label_philip::after {
+    width: 150px;
+    height: 50px;
+}
+
+.label:hover,
+.lavel:focus {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hardness-list__input:checked + label {
+    opacity: 1;
+}
+
+.hardness-list__input:checked + .label::before {
+    position: absolute;
+    content: '';
+    top: 60px;
+    left: -100px;
+    width: 50px;
+    height: 50px;
+    background-image: url('./images/bug.png');
+    background-size: contain;
+}
+
+.button {
+    width: 600px;
+    height: 150px;
+    grid-row: 3 / 5;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: right;
+    font-size: 40px;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/pow-star.png');
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px #c5c5c5;
+}
+
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    box-shadow: 0 0 15px 15px #c9c9c9;
+}
+
+.button:active {
+    opacity: 0.7;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.webheroschool {
+    justify-self: right;
+}
+
+.game-canvas {
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'joda first second third'
+                         'joda fourth fifth sixth'
+                         'bubbles seventh eighth nineth';  
+    grid-template-rows: repeat(3, 400px);
+    grid-template-columns: 800px repeat(3, 400px);
+    align-self: center;
+    justify-self: center;
+}
+
+.first {
+    grid-area: first;
+}
+
+.second {
+    grid-area: second
+}
+
+.third {
+    grid-area: third;
+}
+
+.fourth {
+    grid-area: fourth;
+}
+
+.fifth {
+    grid-area: fifth;
+}
+
+.sixth {
+    grid-area: sixth;
+}
+
+.seventh {
+    grid-area: seventh;
+}
+
+.eighth {
+    grid-area: eighth;
+}
+
+.nineth {
+    grid-area: nineth;
+}
+
+.joda {
+    align-self: end;
+    grid-area: joda;
+    width: 400px;
+    margin-bottom: 100px;
+}
+
+
+.bubbles {
+    position: relative;
+    grid-area: bubbles;
+    align-self: start;
+    width: 400px;
+    padding: 30px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    font-size: 30px;
+    background: #fff;
+}
+
+.bubbles::after {
+    position: absolute;
+    top: -148px;
+    left: 35px;
+    content: '';
+    border-top: 50px solid transparent;
+    border-left: 70px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 105px solid #fff;
+}
+
+.card {
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.front {
+    background-image: url('./images/copyright.png');
+    background-position: center 0;
+    transform: none;
+  }
+  
+  .back {
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/united-squares-negative.png");
+    transform: rotateY(180deg);
+    
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    
+    backface-visibility: hidden;
+}  
+
+.card_reverse {
+    transform: rotateY(180deg);
+}
+
+.bug .front {
+    background-image: url('./images/bug.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+
+
+
+
+
+
